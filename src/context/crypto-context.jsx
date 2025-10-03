@@ -8,7 +8,7 @@ const CryptoContext = createContext({
     loading: false,
 })
 
-export function CryptoContextProvider(children) {
+export function CryptoContextProvider({children}) {
     const [loading, setLoading] = useState(false)
     const [crypto, setCrypto] = useState([])
     const [assets, setAssets] = useState([])
@@ -32,9 +32,9 @@ export function CryptoContextProvider(children) {
         }
         preload()
     }, [])
-    return <CryptoContextProvider value={{loading, crypto, assets}}>
+    return <CryptoContext.Provider value={{loading, crypto, assets}}>
         {children}
-    </CryptoContextProvider>
+    </CryptoContext.Provider>
 }
 
 export default CryptoContext

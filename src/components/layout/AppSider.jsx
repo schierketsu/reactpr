@@ -5,6 +5,7 @@ import { fakeFetchCrypto, fetchAssets } from "../../api";
 import { capitalize, percentDifference } from '../../utils'
 import CryptoContext from "../../context/crypto-context";
 
+
 const siderStyle = {
   padding: "1rem",
 };
